@@ -9,12 +9,9 @@ use App\Models\Movie;
 class PageController extends Controller
 {
     //metodo convenzionalmente chiamato 'index', recupera tutte le info dal db
-    public function index()
+    public function getMovies()
     {
-        $movies = Movie::all();
-
-        // dd($movies);
-
-        return view('home', compact('movies'));
+        return view('movies');
     }
+
 }
