@@ -2,27 +2,24 @@
 
 @section('content')
 
-<h1 class="text-center">Movies Page</h1>
+<h1 class="text-center mb-5">Movies Page</h1>
 
 {{-- inserire ciclo dei dati dei films --}}
 
 <div class="row">
 
-    <div class="col-4">
-
-        @foreach ($movies as $movie)
+    @foreach ($movies as $movie)
+    <div class="col-4 text-center mb-4">
         <div class="card" style="width: 18rem;">
-            <img src="{{$movie->image}}" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">{{$movie->title}}</h4>
+              <h5 class="card-title">{{$movie->original_title}}</h5>
+              <h6 class="card-title">Votation: {{$movie->vote}}</h6>
+              <p class="card-text">Nationality: {{$movie->nationality}}</p>
             </div>
-          </div>
-        @endforeach
-
+        </div>
     </div>
-
+    @endforeach
 </div>
 
 
