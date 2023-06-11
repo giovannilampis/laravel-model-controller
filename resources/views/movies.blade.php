@@ -6,11 +6,11 @@
 
 {{-- inserire ciclo dei dati dei films --}}
 
-<div class="row">
+<div class="row card-group">
 
     @foreach ($movies as $movie)
     <div class="col-4 text-center mb-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card h-100 d-flex" style="width: 18rem;">
             <div class="card-body">
               <h4 class="card-title">{{$movie->title}}</h4>
               <h5 class="card-title">{{$movie->original_title}}</h5>
