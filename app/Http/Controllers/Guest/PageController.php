@@ -11,7 +11,9 @@ class PageController extends Controller
     //metodo convenzionalmente chiamato 'index', recupera tutte le info dal db
     public function getMovies()
     {
-        return view('movies');
+        $movies = Movie::all();
+
+        return view('movies', compact('movies'));
     }
 
 }
